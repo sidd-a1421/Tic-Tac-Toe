@@ -80,6 +80,7 @@ btns.forEach(btn => {
             }
         }
         else {
+            //Bug for the player X
             btn.textContent = 'X';
             btn.disabled = true;
             turnO = true;

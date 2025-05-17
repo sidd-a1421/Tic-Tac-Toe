@@ -26,6 +26,7 @@ body{
     column-gap: 8px;
     row-gap: 8px;
     position: relative;
+    min-width: 320px;
 }
 
 .header{
@@ -63,8 +64,8 @@ body{
 }
 
 .btn:active{
-    background-color: rgba(119, 203, 255, 0.507);
-    scale: 0.95;
+    background-color: #99CCFF;
+    transform: scale(0.95);
 }
 
 .reset{
@@ -86,6 +87,7 @@ body{
 }
 
 .win-line {
+  transform-origin: left center;
   position: absolute;
   background-color: red;
   height: 5px;

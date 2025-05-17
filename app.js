@@ -32,7 +32,7 @@ const lineStyles = {
   "1,4,7": { top: "0", left: "155px", width: "310px", rotate: "90deg" },
   "2,5,8": { top: "0", left: "260px", width: "310px", rotate: "90deg" },
   "0,4,8": { top: "10px", left: "10px", width: "420px", rotate: "45deg" },
-  "2,4,6": { top: "10px", left: "10px", width: "420px", rotate: "-45deg" },
+  "2,4,6": { top: "0", left: "310px", width: "420px", rotate: "135deg" }
 };
 
 function getWinningPattern(tracker) {
@@ -80,17 +80,16 @@ btns.forEach(btn => {
             }
         }
         else {
-            //Bug for the player X
             btn.textContent = 'X';
             btn.disabled = true;
             turnO = true;
-            const pattern = getWinningPattern(trackX);
             trackX.push(btn.dataset.index);
-            if (trackO.length >= 3 && pattern) {
+            const pattern = getWinningPattern(trackX);
+            if (trackX.length >= 3 && pattern) {
                 xScore++;
                 teamX.textContent=`${xScore}`;
-                drawWinLine(pattern);
                 score.textContent = 'X Wins';
+                drawWinLine(pattern);
                 disableAllButtons();
             }
         }

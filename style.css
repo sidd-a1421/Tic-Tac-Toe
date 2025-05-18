@@ -57,6 +57,7 @@ body{
     border-radius: 10px;
     border: none;
     outline: none;
+    -webkit-tap-highlight-color: transparent;
     cursor: pointer;
     font-size: 40px;
     color: red;
